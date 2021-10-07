@@ -119,8 +119,6 @@ int main() {
 
             // Check is object is in my lane
             if (d < (2 + 4 * lane + 2) && d > (2 + 4 * lane - 2)) {
-
-              
               if ((check_car_s > car_s) && ((check_car_s - car_s) < 30)) {
                 too_close = true;
               }
@@ -142,10 +140,7 @@ int main() {
                   
           if (too_close) {
             if (ref_vel > check_speed - 5) {
-              ref_vel -= 0.25;
-            }
-            if(lane > 0){
-              lane = 2;
+              ref_vel -= 0.23;
             }
             if (right_lane_free && lane < 2) {
               lane += 1;
